@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - Book Store</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #2a5298, white);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .profile-container {
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .btn-save {
+            width: 100%;
+            padding: 10px;
+            background-color: #2a88f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-save:hover {
+            background-color: #063668;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block main_block %}
+    <div class="profile-container">
+    <h2>Edit Profile</h2>
+    <hr>
+
+    <!-- Profile Picture -->
+    <img id="profileImagePreview" class="profile-img" src="{{ url_for('static', filename='images/' + (user.profile_picture if user.profile_picture else 'default.png')) }}" alt="Profile Picture">
+
+    <!-- Profile Form -->
+    <form action="{{ url_for('edit_profile') }}" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" value="{{ current_user.name }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="form-control" value="{{ current_user.email }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" class="form-control" value="{{ current_user.mobile }}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="profile_picture">Profile Picture</label>
+            <input type="file" id="profile_picture" name="profile_picture" class="form-control" accept="image/*" onchange="previewImage(event)">
+        </div>
+
+        <button type="submit" class="btn-save" style="background-color: #2a529876;;">Save Changes</button>
+    </form>
+</div>
+{% endblock %}
+
+<script src="/static/js/script.js"></script>
+
+<script>
+    function previewImage(event) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            const output = document.getElementById('profileImagePreview');
+            output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+    }
+</script>
+</body>
+</html>

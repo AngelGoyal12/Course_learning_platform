@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+{% endblock %}
+
+{% block main_block %}
+<!-- Hero Section -->
+<section class="contact-hero" style="background-image: url('../static/images/photo.avif');">
+    <div class="hero-content animate_animated animate_fadeIn">
+        <h1>Contact Us</h1>
+        <p>Get in touch with our team</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-wrapper">
+    <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info animate_animated animate_slideInLeft">
+            <h2>Let's Connect</h2>
+            <p>Have questions about our courses or need assistance? We're here to help! Choose your preferred way to reach us.</p>
+            
+            <div class="info-cards">
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="details">
+                        <h3>Visit Us</h3>
+                        <p>Chitkara University</p>
+                        <p>Rajpura, India</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="details">
+                        <h3>Call Us</h3>
+                        <p>9876543210</p>
+                        <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="details">
+                        <h3>Email Us</h3>
+                        <p>support@techtrek.com</p>
+                        <p>Response within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form animate_animated animate_slideInRight">
+            <h2>Send Us a Message</h2>
+            <form method="POST" action="{{ url_for('contact') }}">
+                {{ form.csrf_token }}
+                
+                <div class="form-group">
+                    {{ form.name(class="form-control", placeholder="Your Name") }}
+                    {% if form.name.errors %}
+                        {% for error in form.name.errors %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.email(class="form-control", placeholder="Your Email") }}
+                    {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.subject(class="form-control", placeholder="Subject") }}
+                    {% if form.subject.errors %}
+                        {% for error in form.subject.errors %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.message(class="form-control", placeholder="Your Message") }}
+                    {% if form.message.errors %}
+                        {% for error in form.message.errors %}
+                            <span class="error-message">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                {{ form.submit(class="submit-btn") }}
+            </form>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash-message {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+</section>
+{% endblock %}

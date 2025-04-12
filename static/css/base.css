@@ -1,0 +1,334 @@
+:root {
+    --primary-color: #2a5298;
+    --secondary-color: #1e1e1c;
+    --accent-color: #f5f5f5;
+    --text-color: #2d2f31;
+    --white: #ffffff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.search-bar {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 2rem;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.signup-btn {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+.btn btn-secondary dropdown-toggle {
+    text-decoration: none;
+    color: red
+}
+
+.footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-color);
+        cursor: pointer;
+    }
+
+    .search-bar {
+        margin: 0 1rem;
+    }
+
+}
+
+.navbar {
+    background-color: var(--white) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item:hover {
+    background-color: var(--accent-color);
+}
+
+.dropdown-item i {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+/* Search Bar Styles */
+.search-form {
+    min-width: 300px;
+}
+
+.search-form .input-group {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.search-form .form-control {
+    border-right: none;
+}
+
+.search-form .btn-outline-primary {
+    border-left: none;
+    background-color: white;
+}
+
+.search-form .btn-outline-primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+/* Cart Badge */
+.badge {
+    font-size: 0.6rem;
+    padding: 0.25em 0.4em;
+}
+/* Add these styles to your base.css file */
+.menu-dropdown {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-btn:hover {
+    color: var(--primary-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.menu-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Adjust existing mobile menu button styles */
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-dropdown {
+        margin-right: 0;
+    }
+    
+    .dropdown-content {
+        width: 100vw;
+        left: -1rem; /* Adjust based on your nav padding */
+        top: calc(100% + 1rem);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .search-form {
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .navbar-collapse {
+        padding: 1rem 0;
+    }
+    
+    .d-flex.align-items-center {
+        flex-wrap: wrap;
+        gap: 0.5rem !important;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

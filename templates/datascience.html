@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrek: Data Science Course</title>
+    <link rel="stylesheet" href="../static/css/python.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/images/logo_cropped.png" type="image/x-icon">
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block title_block %} Data Science Course {% endblock %}
+
+    {% block main_block %}
+    <div class="container my-5">
+        <!-- Course Overview Section -->
+        <section class="mb-5">
+            <b><h1 class="display-4 mb-4">Data Science Course</h1></b>
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h3 mb-3">Course Overview</h2>
+                    <p>Master Data Science from fundamentals to advanced concepts. Perfect for analysts and developers looking to harness the power of data for insights and decision-making.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-clock me-2"></i>
+                                <span>Duration: 14 weeks</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-book me-2"></i>
+                                <span>22+ Modules</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-project-diagram me-2"></i>
+                                <span>6 Real-world Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Requirements Section -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h3 mb-3">Course Requirements</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Basic programming knowledge</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Understanding of statistics</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Laptop or desktop computer</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Internet connection for live sessions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You'll Learn Section -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h3 mb-3">What You'll Learn</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Data Analysis with Python</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Statistical Methods</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Data Visualization</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Machine Learning basics</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Big Data Analytics</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>SQL and Database Management</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Data Mining Techniques</li>
+                                <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Predictive Modeling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Benefits Section -->
+        <section class="mb-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h3 mb-3">Course Benefits</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <i class="fas fa-certificate text-primary mb-3 fa-2x"></i>
+                                    <h3 class="h5">Industry Recognition</h3>
+                                    <p class="mb-0">Receive a verified certificate upon completion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <i class="fas fa-users text-primary mb-3 fa-2x"></i>
+                                    <h3 class="h5">Expert Support</h3>
+                                    <p class="mb-0">Get help from data science professionals</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <i class="fas fa-laptop-code text-primary mb-3 fa-2x"></i>
+                                    <h3 class="h5">Practical Learning</h3>
+                                    <p class="mb-0">Work on real-world data science projects</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plans Section -->
+        <section class="plans-container">
+            <h2 class="h3 mb-4">Choose Your Learning Plan</h2>
+            <div class="plans-grid">
+                <!-- Premium Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2>Premium</h2>
+                        <div class="price">
+                            <span class="current-price">₹549</span>
+                            <span class="original-price">₹899</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Access to all Data Science courses</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Certificate of completion</li>
+                        <li><i class="fas fa-check"></i> Practice exercises</li>
+                        <li><i class="fas fa-check"></i> Community access</li>
+                    </ul>
+                    <form action="{{ url_for('add_to_cart') }}" method="POST">
+                        <input type="hidden" name="plan_type" value="Data Science Premium">
+                        <input type="hidden" name="plan_price" value="549">
+                        <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    </form>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="plan-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h2>Professional</h2>
+                        <div class="price">
+                            <span class="current-price">₹799</span>
+                            <span class="original-price">₹1199</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Everything in Premium</li>
+                        <li><i class="fas fa-check"></i> 1-on-1 mentoring</li>
+                        <li><i class="fas fa-check"></i> Career guidance</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Industry projects</li>
+                    </ul>
+                    <form action="{{ url_for('add_to_cart') }}" method="POST">
+                        <input type="hidden" name="plan_type" value="Data Science Professional">
+                        <input type="hidden" name="plan_price" value="799">
+                        <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    </form>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2>Enterprise</h2>
+                        <div class="price">
+                            <span class="current-price">₹1199</span>
+                            <span class="original-price">₹1799</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li><i class="fas fa-check"></i> Everything in Professional</li>
+                        <li><i class="fas fa-check"></i> Custom learning path</li>
+                        <li><i class="fas fa-check"></i> Team collaboration</li>
+                        <li><i class="fas fa-check"></i> Corporate training</li>
+                        <li><i class="fas fa-check"></i> Dedicated support manager</li>
+                    </ul>
+                    <form action="{{ url_for('add_to_cart') }}" method="POST">
+                        <input type="hidden" name="plan_type" value="Data Science Enterprise">
+                        <input type="hidden" name="plan_price" value="1199">
+                        <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    {% endblock %}
+</body>
+</html>

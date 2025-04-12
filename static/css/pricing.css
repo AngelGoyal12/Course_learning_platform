@@ -1,0 +1,136 @@
+.pricing-header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: gray;
+    color: white;
+    margin-top: 100px;
+}
+
+.pricing-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-plans {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+}
+
+.plan-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.plan-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-card.featured {
+    border: 2px solid #2a5298;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #2a5298;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.price {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    color: #2a5298;
+}
+
+.currency {
+    font-size: 1.5rem;
+    vertical-align: super;
+}
+
+.period {
+    font-size: 1rem;
+    color: #666;
+}
+
+.savings {
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.features li {
+    margin: 1rem 0;
+    color: #666;
+}
+
+.features i {
+    color: #2a5298;
+    margin-right: 0.5rem;
+}
+
+.subscribe-btn {
+    background: #2a5298;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: #1e3c72;
+}
+
+.guarantee {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+}
+
+.guarantee-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.guarantee i {
+    font-size: 3rem;
+    color: #2a5298;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .pricing-header h1 {
+        font-size: 2rem;
+    }
+    
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+}

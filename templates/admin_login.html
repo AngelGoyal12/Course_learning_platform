@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2a5298, white);
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+
+        .admin-login-container {
+            display: flex;
+            width: 60%;
+            max-width: 900px;
+            margin-top: 170px;
+            background: white;
+            overflow: hidden;
+            margin-left: 170px;
+            margin-bottom: 100px;
+            padding: 40px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-admin-login {
+            background-color: #1d407b;
+            color: white;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            padding: 10px 0;
+        }
+
+        .btn-admin-login:hover {
+            background-color: #1e3c72;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 91, 187, 0.4);
+        }
+        .text-center, form{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            flex-direction: column;
+        }
+
+        .text-center{
+            background: rgba(42, 82, 152, 0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block main_block %}
+    <div class="admin-login-container">
+        <h2 class="text-center mb-4">Admin Login</h2>
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('admin_login') }}">
+            {{ form.hidden_tag() }}
+            <div class="mb-3">
+                {{ form.email.label(class="form-label") }}
+                {{ form.email(class="form-control") }}
+            </div>
+            <div class="mb-3">
+                {{ form.password.label(class="form-label") }}
+                {{ form.password(class="form-control") }}
+            </div>
+            {{ form.submit(class="btn btn-admin-login w-100") }}
+        </form>
+    </div>
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrek Blog: Latest in Tech & Coding</title>
+    <link rel="stylesheet" href="../static/css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block title_block %} Blog {% endblock %}
+
+    {% block main_block %}
+    <section class="blog-hero" style="background-image: url('../static/images/photo.avif');">
+        <div class="hero-content">
+            <h1>TechTrek Blog</h1>
+            <p>Stay updated with the latest in technology and programming</p>
+        </div>
+    </section>
+
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-pills">
+                <a href="#"></a><button class="category-pill active">All</button></a>
+                <button class="category-pill">Python</button>
+                <button class="category-pill">Web Development</button>
+                <button class="category-pill">Data Science</button>
+                <button class="category-pill">Machine Learning</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-post-card">
+                <!-- <div class="featured-post-image">
+                    <img src="/api/placeholder/800/400" alt="Featured post">
+                </div> -->
+                <a href="https://www.coursera.org/learn/ai-python-for-beginners/paidmedia?utm_medium=sem&utm_source=bg&utm_campaign=b2c_india_ai-python-for-beginners_microsoft_ftcof_learn_px_dr_bau_bg_sem_pr_in_en_m_x_24-12_x&campaignid=662961588&adgroupid=1244648500564194&device=c&keyword=python%20basics%20for%20beginners&matchtype=p&network=o&devicemodel=&adposition=&creativeid=77790661846218&adgroup=b2c_india_ai-python-for-beginners_deeplearning-ai_px_bau_gg_in_x_x_nb-ph_x_hyb_x_x_learn_x&querystring=getting%20started%20with%20python%20a%20complete%20guide%20for%20beginners&targetid=kwd-77790903136794:loc-90&bidmatchtype=bp&extensionid=&msclkid=920d4f3b9a20177b393428922867897b&utm_term=python%20basics%20for%20beginners&utm_content=b2c_india_ai-python-for-beginners_deeplearning-ai_px_bau_gg_in_x_x_nb-ph_x_hyb_x_x_learn_x">
+                    <div class="featured-post-content">
+                        <span class="post-category">Python</span>
+                        <h2>Getting Started with Python: A Complete Guide for Beginners</h2>
+                        <p>Learn the fundamentals of Python programming language and start your coding journey with this comprehensive guide.</p>
+                        <div class="post-meta">
+                            <span class="post-date">Feb 8, 2025</span>
+                            <span class="read-time">12 min read</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-grid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-posts">
+                        <article class="blog-post">
+                            <!-- <img src="/api/placeholder/400/250" alt="Blog post"> -->
+                            <a href="https://daily.dev/blog/modern-javascript-essentials-for-developers#:~:text=Explore%20the%20essentials%20of%20modern%20JavaScript%20development%20including,Enhance%20your%20coding%20skills%20with%20these%20key%20concepts%21">
+                                <div class="post-content">
+                                    <span class="post-category">Web Development</span>
+                                    <h3>Modern JavaScript Features Every Developer Should Know</h3>
+                                    <p>Explore the latest JavaScript features that are revolutionizing web development...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date">Feb 7, 2025</span>
+                                        <span class="read-time">8 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="blog-post">
+                            <!-- <img src="/api/placeholder/400/250" alt="Blog post"> -->
+                            <a href="https://www.geeksforgeeks.org/data-visualization-with-python/">
+                                <div class="post-content">
+                                    <span class="post-category">Data Science</span>
+                                    <h3>Data Visualization with Python: A Practical Guide</h3>
+                                    <p>Master the art of data visualization using popular Python libraries...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date">Feb 6, 2025</span>
+                                        <span class="read-time">10 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="blog-post">
+                            <!-- <img src="/api/placeholder/400/250" alt="Blog post"> -->
+                            <a href="https://www.geeksforgeeks.org/implementing-neural-networks-using-tensorflow/">
+                                <div class="post-content">
+                                    <span class="post-category">Machine Learning</span>
+                                    <h3>Introduction to Neural Networks with TensorFlow</h3>
+                                    <p>Understanding the basics of neural networks and implementing them...</p>
+                                    <div class="post-meta">
+                                        <span class="post-date">Feb 5, 2025</span>
+                                        <span class="read-time">15 min read</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="sidebar">
+                        <div class="sidebar-section">
+                            <h4>Popular Topics</h4>
+                            <ul class="topic-list">
+                                <li><i class="fas fa-hashtag"></i> Python Programming</li>
+                                <li><i class="fas fa-hashtag"></i> Web Development</li>
+                                <li><i class="fas fa-hashtag"></i> Data Science</li>
+                                <li><i class="fas fa-hashtag"></i> Machine Learning</li>
+                                <li><i class="fas fa-hashtag"></i> Artificial Intelligence</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-section">
+                            <h4>Newsletter</h4>
+                            <p>Subscribe to our newsletter for the latest tech updates.</p>
+                            <form class="newsletter-form">
+                                <input type="email" placeholder="Your email address">
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+</html>

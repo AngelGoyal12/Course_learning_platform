@@ -1,0 +1,322 @@
+/* static/css/terms.css */
+
+/* Reset and Base Styles */
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2a5298;
+    --secondary-color: #1e1e1c;
+    --text-color: #2d2f31;
+    --light-gray: #f5f5f5;
+    --border-color: #dcdcdc;
+    --white: #ffffff;
+    --heading-color: #1c1d1f;
+    --link-color: #5624d0;
+}
+
+/* Terms Hero Section */
+.terms-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('/api/placeholder/1400/300') center/cover;
+    color: var(--white);
+    padding: 6rem 2rem;
+    text-align: center;
+    margin-top: 85px;
+}
+
+.terms-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.terms-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Terms Content Container */
+.terms-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: var(--white);
+}
+
+/* Table of Contents */
+.terms-toc {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.terms-toc h2 {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.terms-toc ul {
+    list-style: none;
+}
+
+.terms-toc li {
+    margin: 0.5rem 0;
+}
+
+.terms-toc a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.terms-toc a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Terms Sections */
+.terms-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.terms-section:last-child {
+    border-bottom: none;
+}
+
+.terms-section h2 {
+    font-size: 1.8rem;
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    padding-top: 2rem;
+}
+
+.terms-section h3 {
+    font-size: 1.4rem;
+    color: var(--heading-color);
+    margin: 1.5rem 0 1rem 0;
+}
+
+.terms-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.terms-section ul, 
+.terms-section ol {
+    margin: 1rem 0 1rem 2rem;
+}
+
+.terms-section li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Definition Lists */
+.terms-section dl {
+    margin: 1rem 0;
+}
+
+.terms-section dt {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    margin-top: 1rem;
+}
+
+.terms-section dd {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Important Notices */
+.terms-notice {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.terms-notice p {
+    color: #856404;
+    margin: 0;
+}
+
+/* Links within Terms */
+.terms-section a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.terms-section a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Print Styles */
+@media print {
+    .terms-hero {
+        background: none;
+        color: var(--text-color);
+        padding: 2rem;
+        margin-top: 0;
+    }
+
+    .terms-content {
+        padding: 0;
+    }
+
+    .terms-section {
+        page-break-inside: avoid;
+    }
+
+    .terms-toc {
+        background: none;
+        border: 1px solid var(--border-color);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-hero {
+        padding: 4rem 1rem;
+    }
+
+    .terms-hero h1 {
+        font-size: 2rem;
+    }
+
+    .terms-content {
+        padding: 2rem 1rem;
+    }
+
+    .terms-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .terms-section p,
+    .terms-section li,
+    .terms-section dt,
+    .terms-section dd {
+        font-size: 1rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e5e5e5;
+        --heading-color: #ffffff;
+        --light-gray: #2d2d2d;
+        --border-color: #404040;
+        --white: #1a1a1a;
+    }
+
+    .terms-notice {
+        background: #2d2618;
+        border-color: #483c1c;
+    }
+
+    .terms-notice p {
+        color: #ffd970;
+    }
+
+    .terms-toc a {
+        color: #b69eff;
+    }
+
+    .terms-section a {
+        color: #b69eff;
+    }
+}
+
+/* Animation for Section Transitions */
+.terms-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+.terms-content::-webkit-scrollbar {
+    width: 12px;
+}
+
+.terms-content::-webkit-scrollbar-track {
+    background: var(--light-gray);
+}
+
+.terms-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    border: 3px solid var(--light-gray);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background: var(--link-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
